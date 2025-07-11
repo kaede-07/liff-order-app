@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>職員室 注文フォーム</title>
+  <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+</head>
+<body>
+  <h2>LINE注文フォーム</h2>
+
+  <form id="order-form">
+    <label>ユーザー名:<br>
+      <input type="text" id="userName" readonly>
+    </label><br><br>
+
+    <label>職員室:<br>
+      <select id="room" required>
+        <option value="職員室A">職員室</option>
+        <option value="生徒指導室">生徒指導室</option>
+        <option value="校長室">校長室</option>
+      </select>
+    </label><br><br>
+
+    <label>商品名:<br>
+      <input type="text" id="product" required>
+    </label><br><br>
+
+    <label>数量:<br>
+      <input type="number" id="quantity" min="1" value="1" required>
+    </label><br><br>
+
+    <button type="submit">注文する</button>
+  </form>
+
+  <p id="result" style="color: green;"></p>
+
+  <script src="script.js"></script>
+</body>
+</html>
